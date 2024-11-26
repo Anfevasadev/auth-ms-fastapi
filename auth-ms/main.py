@@ -1,7 +1,7 @@
 # auth-ms/main.py
 from fastapi import FastAPI
-from interfaces.api.v1.user import router as user_router
-from interfaces.api.v1.auth import router as auth_router
+from interfaces.api.v1.routers.user import router as user_router
+from interfaces.api.v1.routers.auth import router as auth_router
 from fastapi.responses import JSONResponse
 
 app = FastAPI()
