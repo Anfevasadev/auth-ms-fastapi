@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "auth-ms"
+version = "0.1.0"
+description = ""
+authors = ["Andrés Felipe Valencia Sánchez <47144203+Anfevasadev@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.115.5"
+uvicorn = "^0.32.1"
+pyjwt = "^2.10.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
