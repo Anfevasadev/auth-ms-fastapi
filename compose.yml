@@ -1,0 +1,5 @@
+services:
+  auth-ms:
+    build: ./auth-ms
+    ports:
+      - "8000:8080"
