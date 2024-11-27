@@ -1,4 +1,4 @@
-from sqlalchemy import Column, String, Enum
+from sqlalchemy import Column, String, Enum, Integer
 from sqlalchemy.dialects.postgresql import UUID
 from infrastructure.database.session import Base
 import uuid
@@ -20,6 +20,8 @@ class User(Base):
                      nullable=False,
                      default=uuid.uuid4)
     username = Column(String, unique=True)
+    name = Column(String,nullable=False)
+    age = Column(Integer, nullable=False)
     password_hash = Column(String, nullable=False)
     email = Column(String, unique=True)
     role = Column(Enum(UserRole), default=UserRole.user)
