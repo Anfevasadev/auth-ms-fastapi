@@ -3,9 +3,11 @@ from enum import Enum
 from uuid import UUID
 from typing import Optional
 
+
 class UserRole(str, Enum):
     admin = 'admin'
     user = 'user'
+
 
 class UserResponseSchema(BaseModel):
     user_id: UUID
@@ -14,8 +16,10 @@ class UserResponseSchema(BaseModel):
     age: int
     email: str
     role: UserRole
+
     class Config:
         from_attributes = True
+
 
 class UserRegisterSchema(BaseModel):
     username: str
@@ -24,5 +28,6 @@ class UserRegisterSchema(BaseModel):
     email: str
     password: str
     role: Optional[UserRole] = UserRole.user
+
     class Config:
         from_attributes = True

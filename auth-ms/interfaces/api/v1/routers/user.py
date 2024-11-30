@@ -12,7 +12,7 @@ user_service = UserService()
 def read_root():
     return {"Hello": "World from user"}
 
+
 @router.post("/create", response_model=UserResponseSchema)
-def create_user( user: UserRegisterSchema, db: Session = Depends(get_db)):
+def create_user(user: UserRegisterSchema, db: Session = Depends(get_db)):
     return user_service.create_user(db, user)
-    
